@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Система голосування</title>
+
+    <!-- Підключення CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Система голосування</h2>
+
+        <!-- Поле введення ідентифікатора -->
+        <div class="field">
+            <label for="userId">Ідентифікатор користувача:</label>
+            <input type="text" id="userId"
+                   placeholder="Наприклад, User123">
+            <span id="userError"></span>
+        </div>
+
+        <!-- Поле введення номера голосу -->
+        <div class="field">
+            <label for="voteNumber">Номер голосу (1-10):</label>
+            <input type="text" id="voteNumber"
+                   placeholder="Введіть число від 1 до 10">
+            <span id="numberError"></span>
+        </div>
+
+        <p>Який предмет вам найбільше подобається?</p>
+
+        <!-- Варіанти голосування -->
+        <div class="option">
+            <input type="checkbox" id="html">
+            <label for="html">HTML</label>
+        </div>
+
+        <div class="option">
+            <input type="checkbox" id="css">
+            <label for="css">CSS</label>
+        </div>
+
+        <div class="option">
+            <input type="checkbox" id="javascript">
+            <label for="javascript">JavaScript</label>
+        </div>
+
+        <div class="option">
+            <input type="checkbox" id="cpp">
+            <label for="cpp">C++</label>
+        </div>
+
+        <!-- Підтвердження голосу -->
+        <div class="option">
+            <input type="checkbox" id="confirm">
+            <label for="confirm">Підтверджую свій голос</label>
+        </div>
+
+        <!-- Кнопка голосування -->
+        <button onclick="vote()">Проголосувати</button>
+
+        <!-- Виведення результатів -->
+        <div id="result"></div>
+
+    </div>
+
+    <!-- Підключення JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
